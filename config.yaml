@@ -1,0 +1,20 @@
+database:
+  duckdb_path: ""
+  catalog: ""
+  namespace: ""
+
+spark:
+  app_name: "icebreaker"
+  extensions: "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions"
+  packages: "org.apache.hadoop:hadoop-aws:3.3.2,org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.5.0,software.amazon.awssdk:bundle:2.28.8,software.amazon.awssdk:url-connection-client:2.20.131"
+  catalog_name: ""
+  catalog_type: "hadoop"
+  warehouse: "s3a://iceberg-lakehouse"
+  s3a_access_key: ""
+  s3a_secret_key: ""
+  s3a_endpoint: "http://127.0.0.1:9000"
+  driver_memory: "4g"
+  executor_memory: "12g"
+
+logging:
+  level: "INFO"
